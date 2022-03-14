@@ -1,0 +1,55 @@
+<html>
+<head>
+</head>
+<script>
+console.log("in script")
+function cols(value)
+{
+document.bgColor=value;
+}
+
+function trying(value)
+{   console.log("called");
+    y="<select>"
+    if(value==="gujarat")
+    {
+        y+="<option value='ahmedabad'> ahmedabad </option>"
+         y+="<option value='surat'> surat </option>"
+         
+    }
+    else if (value==="rajasthan")
+    {
+    y+="<option value='udaipur'>udaipur</option>"
+    y+="<option value='jaipur'>jaipur</option>"
+    }
+    y+="</select>"
+    document.getElementById("display").innerHTML=y;
+}
+</script>
+<style type="text/scss">
+
+</style>
+
+<body>
+
+
+hello there is
+
+<select onchange="cols(this.value)">
+<option value="red">red</option>
+<option value="pink">pink</option>
+<option value="yellow">yellow</option>
+</select>
+
+<select onchange="trying(this.value)">
+<option value="rajasthan"> rajasthan </option>
+<option value="gujarat">gujarat</option>
+</select>
+
+<div id="display">
+</div>
+
+
+
+</body>
+</html>
